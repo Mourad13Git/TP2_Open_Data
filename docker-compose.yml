@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  pipeline:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: tp2-pipeline
+    volumes:
+      # Persister les données
+      - ./data:/app/data
+      # Persister les logs
+      - ./logs:/app/logs
+    environment:
+      - PYTHONUNBUFFERED=1
+    # Override la commande par défaut si nécessaire
+    # command: ["--category", "biscuits", "--name", "biscuits_fr"]
+    restart: "no"
+
