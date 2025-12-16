@@ -1,0 +1,19 @@
+# Normaliser les fins de ligne
+* text=auto
+
+# Fichiers spécifiques
+*.py text eol=lf
+*.md text eol=lf
+*.json text eol=lf
+*.toml text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+
+# Notebooks
+*.ipynb text
+
+# Binaires
+*.parquet binary
+*.png binary
+*.jpg binary
+
